@@ -2,13 +2,24 @@ package com.code.microserveces.Currencyexchangeservice.entity;
 
 import java.math.BigDecimal;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class CurrencyExchange {
 
 	
+	@Id
+	@GeneratedValue
 	private Long id;
+	@Column(name="currency_from")
 	private String from ;
+	@Column(name="currency_to")
 	private String to;
-	private BigDecimal convertionMultiple;
+	private BigDecimal conversionMultiple;
+	
 	private String environment;
 	
 	public CurrencyExchange() {
@@ -16,12 +27,12 @@ public class CurrencyExchange {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public CurrencyExchange(Long id, String from, String to, BigDecimal convertionMultiple) {
+	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.convertionMultiple = convertionMultiple;
+		this.conversionMultiple = conversionMultiple;
 	}
 	
 	
@@ -43,11 +54,11 @@ public class CurrencyExchange {
 	public void setTo(String to) {
 		this.to = to;
 	}
-	public BigDecimal getConvertionMultiple() {
-		return convertionMultiple;
+	public BigDecimal getconversionMultiple() {
+		return conversionMultiple;
 	}
-	public void setConvertionMultiple(BigDecimal convertionMultiple) {
-		this.convertionMultiple = convertionMultiple;
+	public void setconversionMultiple(BigDecimal conversionMultiple) {
+		this.conversionMultiple = conversionMultiple;
 	}
 
 	public String getEnvironment() {
