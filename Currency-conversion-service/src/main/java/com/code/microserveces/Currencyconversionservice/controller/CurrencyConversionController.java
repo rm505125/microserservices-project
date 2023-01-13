@@ -32,7 +32,7 @@ public class CurrencyConversionController {
 
 		return new CurrencyConversion(currencyConversion.getId(), from, to, quantity,
 				currencyConversion.getConversionMultiple(),
-				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment());
+				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment()+" "+"in restTemplate");
 
 		// return new CurrencyConversion(1000L, from, to, quantity, BigDecimal.ONE,
 		// BigDecimal.ONE, "");
